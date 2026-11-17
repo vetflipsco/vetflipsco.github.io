@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How VA Combined Ratings Work — The Math VA Actually Uses | VetFlipsCo</title>
+<meta name="description" content="50% + 30% is not 80%. How the VA combined rating table (38 CFR §4.25) and the bilateral factor actually work, with a fully worked example and the current veteran-alone pay rates.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<!-- Pinterest Tag -->
+<script>
+!function(e){if(!window.pintrk){window.pintrk = function () {
+window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+n=window.pintrk;n.queue=[],n.version="3.0";var
+t=document.createElement("script");t.async=!0,t.src=e;var
+r=document.getElementsByTagName("script")[0];
+r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+pintrk('load', '2614442432472');
+pintrk('page');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt=""
+src="https://ct.pinterest.com/v3/?event=init&tid=2614442432472&noscript=1" />
+</noscript>
+<!-- end Pinterest Tag -->
+<style>
+  :root{--navy:#1B2A4E;--navy2:#24365f;--gold:#E8B33C;--teal:#2A9D8F;--paper:#F7F5F0;--ink:#22262e;--mut:#5a6270;--card:#ffffff;--line:#e3e0d8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+  a{color:var(--navy);text-decoration:none}
+  header{background:var(--navy);color:#fff}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .bar{display:flex;align-items:center;gap:14px;padding:14px 0}
+  .bar img{width:44px;height:44px;border-radius:8px}
+  .bar .name{font-size:22px;font-weight:800;letter-spacing:.3px}
+  .bar nav{margin-left:auto;display:flex;gap:18px;font-size:14px}
+  .bar nav a{color:#cfd8ec}
+  .bar nav a:hover{color:#fff}
+  .article{max-width:760px;margin:0 auto;padding:36px 20px 10px}
+  .kicker{color:var(--teal);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-size:31px;line-height:1.25;color:var(--navy);margin:8px 0 10px}
+  .lede{font-size:17.5px;color:var(--ink)}
+  h2{font-size:22px;color:var(--navy);margin:30px 0 8px}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0 10px 22px}
+  li{margin:5px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--card);font-size:15px}
+  th,td{border:1px solid var(--line);padding:8px 12px;text-align:left}
+  th{background:var(--navy);color:#fff}
+  td.num,th.num{text-align:right}
+  .example{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:10px;padding:16px 20px;margin:16px 0}
+  .example h3{color:var(--navy);font-size:16px;margin-bottom:6px}
+  .cta-panel{background:var(--navy);color:#fff;border-radius:14px;padding:22px 24px;margin:28px 0}
+  .cta-panel h3{font-size:19px;margin-bottom:6px}
+  .cta-panel p{color:#d6deef;margin:6px 0}
+  .btn{display:inline-block;border-radius:10px;padding:11px 20px;font-weight:700;font-size:15px;margin-top:10px}
+  .btn-gold{background:var(--gold);color:#231a02}
+  .btn-ghost{border:2px solid #8fa3cc;color:#eaf0ff;margin-left:8px}
+  .fineprint{color:var(--mut);font-size:13.5px}
+  footer{background:var(--navy);color:#cfd8ec;margin-top:44px;padding:26px 0;text-align:center;font-size:14px}
+  footer a{color:#fff;font-weight:600}
+  @media (max-width:640px){h1{font-size:26px}.bar nav{display:none}.btn-ghost{margin-left:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <img src="img/logo.png" alt="VetFlipsCo logo">
+    <div class="name">VetFlipsCo</div>
+    <nav>
+      <a href="index.html#free">Free Tools</a><a href="index.html#military">Military</a><a href="index.html#guides">Guides</a><a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article">
+  <div class="kicker">Guide · VA Disability</div>
+  <h1>How VA Combined Ratings Work: The Math VA Actually Uses</h1>
+  <p class="lede">If you have a 50% rating and a 30% rating, the VA does not pay you at 80%. It pays you at 70% — and the reason is a formula most veterans have never seen written down. Here it is, with every step shown.</p>
+
+  <h2>The whole-person idea</h2>
+  <p>The VA rates disability against a whole, fully efficient person — 100%. Each condition removes a percentage of what remains, not a percentage of the whole. A 50% rating leaves you 50% "efficient." A second condition rated 30% takes 30% <em>of that remaining 50%</em> — 15 points — not 30 points off the top.</p>
+  <p>That's why VA ratings can never add past 100, and why stacking small ratings produces less than people expect. The official method is the Combined Ratings Table in <strong>38 CFR §4.25</strong>.</p>
+
+  <h2>The rules, in order</h2>
+  <ol>
+    <li><strong>Sort highest to lowest.</strong> Ratings are combined starting with the largest.</li>
+    <li><strong>Combine two at a time.</strong> Combined = A + B × (100 − A) ÷ 100. Repeat, feeding the result in as the new A.</li>
+    <li><strong>Bilateral conditions go first — and get a bonus.</strong> If conditions affect both sides of the body (both knees, both shoulders, an arm and a leg), combine those together first, then add <strong>10% of that combined value</strong> back. This is the bilateral factor, and it's the step most online explanations skip.</li>
+    <li><strong>Round once, at the very end.</strong> The final number rounds to the nearest 10, with .5 rounding up. 76.78% becomes 80%. Nothing rounds along the way.</li>
+  </ol>
+
+  <div class="example">
+    <h3>Worked example: 50% + 30% + 20% + 10%</h3>
+    <p>Say the 30% and 20% are bilateral (both knees), and the 50% and 10% are not.</p>
+    <ul>
+      <li><strong>Bilateral pair first:</strong> 30 + 20 × (100 − 30) ÷ 100 = 30 + 14 = <strong>44</strong></li>
+      <li><strong>Bilateral factor:</strong> 44 + (10% of 44) = 44 + 4.4 = <strong>48.4</strong></li>
+      <li><strong>Combine with the 50%:</strong> 50 + 48.4 × (100 − 50) ÷ 100 = 50 + 24.2 = <strong>74.2</strong></li>
+      <li><strong>Combine with the 10%:</strong> 74.2 + 10 × (100 − 74.2) ÷ 100 = 74.2 + 2.58 = <strong>76.78</strong></li>
+      <li><strong>Round:</strong> 76.78% → <strong>80% combined rating</strong></li>
+    </ul>
+    <p>Straight addition says 110%. VA math says 80%. At the current veteran-alone rates, 80% pays <strong>$2,102.15/month</strong>.</p>
+  </div>
+
+  <h2>What each combined rating pays</h2>
+  <p>Monthly compensation, veteran alone with no dependents, effective December 1, 2025 (source: VA's published veteran rates at va.gov). Dependents add money at ratings of 30% and above.</p>
+  <table>
+    <tr><th>Combined rating</th><th class="num">Monthly payment</th></tr>
+    <tr><td>10%</td><td class="num">$180.42</td></tr>
+    <tr><td>20%</td><td class="num">$356.66</td></tr>
+    <tr><td>30%</td><td class="num">$552.47</td></tr>
+    <tr><td>40%</td><td class="num">$795.84</td></tr>
+    <tr><td>50%</td><td class="num">$1,132.90</td></tr>
+    <tr><td>60%</td><td class="num">$1,435.02</td></tr>
+    <tr><td>70%</td><td class="num">$1,808.45</td></tr>
+    <tr><td>80%</td><td class="num">$2,102.15</td></tr>
+    <tr><td>90%</td><td class="num">$2,362.30</td></tr>
+    <tr><td>100%</td><td class="num">$3,938.58</td></tr>
+  </table>
+  <p>Notice the cliff between 90% and 100% — over $1,500 a month. That's why the rounding rule and the bilateral factor matter so much near the top: a single point of exact value can be the difference between rounding to 90 and rounding to 100.</p>
+
+  <h2>Three mistakes that throw the number off</h2>
+  <ul>
+    <li><strong>Adding ratings directly.</strong> The most common one — and the reason a "110%" claim pays at 80.</li>
+    <li><strong>Rounding each step.</strong> VA rounds once, at the end. Rounding early can move the final answer by a full 10% bracket.</li>
+    <li><strong>Forgetting the bilateral factor.</strong> If two or more of your rated conditions are bilateral, skipping the +10%-of-value step understates your rating — in the example above it was worth 4.4 points, which carried the final round-up to 80.</li>
+  </ul>
+
+  <div class="cta-panel">
+    <h3>Run your own ratings — free</h3>
+    <p>Our free VA Combined Rating Quick Calculator does this exact math: type your ratings, mark which are bilateral, and get your true combined rating and estimated monthly pay. One sheet, no macros, works in Excel and Google Sheets.</p>
+    <a class="btn btn-gold" href="https://vetflipsco.gumroad.com/l/aclqus">Download the free calculator</a>
+    <a class="btn btn-ghost" href="https://vetflipsco.gumroad.com/l/rtwyxp">See the full Claim Tracker — $29</a>
+    <p style="margin-top:12px">The full VA Claim Tracker &amp; Rating Calculator tracks every condition and claim alongside the math, and counts down your appeal deadlines so a window never closes quietly.</p>
+  </div>
+
+  <p class="fineprint">VetFlipsCo's calculators are organizational tools, not claims advice, and are not affiliated with the U.S. Department of Veterans Affairs. Filing a VA claim is always free — an accredited VSO (DAV, VFW, American Legion, or your state veterans service) will help you file at no cost. Rates shown are the veteran-alone base rates effective December 1, 2025; dependents, Special Monthly Compensation, and TDIU change the figures.</p>
+</div>
+
+<footer>
+  <div class="wrap">
+    © 2026 VetFlipsCo — Veteran-owned. Spreadsheet tools that do the math.<br>
+    <a href="index.html">Home</a> · <a href="https://vetflipsco.gumroad.com">Gumroad</a> · <a href="https://vetflipsco.etsy.com">Etsy</a> · <a href="https://www.pinterest.com/vetflipsco/">Pinterest</a> · <a href="https://www.youtube.com/@VetFlipsCo">YouTube</a>
+  </div>
+</footer>
+</body>
+</html>
