@@ -58,8 +58,21 @@ src="https://ct.pinterest.com/v3/?event=init&tid=2614442432472&noscript=1" />
   .fineprint{color:var(--mut);font-size:13.5px}
   footer{background:var(--navy);color:#cfd8ec;margin-top:44px;padding:26px 0;text-align:center;font-size:14px}
   footer a{color:#fff;font-weight:600}
+  .faq h3{font-size:16.5px;color:var(--navy);margin:16px 0 4px}
   @media (max-width:640px){h1{font-size:26px}.bar nav{display:none}.btn-ghost{margin-left:0}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Why isn't 50% + 30% equal to 80% with the VA?", "acceptedAnswer": {"@type": "Answer", "text": "Because each rating applies to what remains of a whole person. A 50% rating leaves 50% efficiency; a 30% rating takes 30% of that remainder — 15 points — for a combined value of 65%, which rounds to 70%."}},
+    {"@type": "Question", "name": "What is the VA Combined Ratings Table?", "acceptedAnswer": {"@type": "Answer", "text": "It is the method in 38 CFR §4.25: combine ratings two at a time using A + B × (100 − A) ÷ 100, handling bilateral conditions first with their factor, and round only the final result to the nearest 10."}},
+    {"@type": "Question", "name": "Does the VA round my rating at each step?", "acceptedAnswer": {"@type": "Answer", "text": "No. The VA rounds once, at the very end, to the nearest 10, with .5 rounding up. Rounding at intermediate steps can move the final answer by a full 10% bracket."}},
+    {"@type": "Question", "name": "Do dependents change my combined rating?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dependents do not change the combined rating itself. At ratings of 30% or higher, they increase the monthly payment amount."}}
+  ]
+}
+</script>
 </head>
 <body>
 <header>
@@ -125,6 +138,18 @@ src="https://ct.pinterest.com/v3/?event=init&tid=2614442432472&noscript=1" />
     <li><strong>Rounding each step.</strong> VA rounds once, at the end. Rounding early can move the final answer by a full 10% bracket.</li>
     <li><strong>Forgetting the bilateral factor.</strong> If two or more of your rated conditions are bilateral, skipping the +10%-of-value step understates your rating — in the example above it was worth 4.4 points, which carried the final round-up to 80.</li>
   </ul>
+
+  <div class="faq">
+    <h2>Questions veterans ask about combined ratings</h2>
+    <h3>Why isn't 50% + 30% equal to 80% with the VA?</h3>
+    <p>Because each rating applies to what remains of a whole person. A 50% rating leaves 50% efficiency; a 30% rating takes 30% of that remainder — 15 points — for a combined value of 65%, which rounds to 70%.</p>
+    <h3>What is the VA Combined Ratings Table?</h3>
+    <p>It is the method in 38 CFR §4.25: combine ratings two at a time using A + B × (100 − A) ÷ 100, handling bilateral conditions first with their factor, and round only the final result to the nearest 10.</p>
+    <h3>Does the VA round my rating at each step?</h3>
+    <p>No. The VA rounds once, at the very end, to the nearest 10, with .5 rounding up. Rounding at intermediate steps can move the final answer by a full 10% bracket.</p>
+    <h3>Do dependents change my combined rating?</h3>
+    <p>No. Dependents do not change the combined rating itself. At ratings of 30% or higher, they increase the monthly payment amount.</p>
+  </div>
 
   <div class="cta-panel">
     <h3>Run your own ratings — free</h3>
